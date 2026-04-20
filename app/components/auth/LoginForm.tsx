@@ -1,26 +1,26 @@
 "use client"
 
-import { useState } from "react"
-import toast from 'react-hot-toast'
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
 import { useAuth } from "@/app/context/AuthContext"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import toast from 'react-hot-toast'
+import { z } from "zod"
 
+import { Button } from "@/app/components/ui/button"
 import {
   Form,
+  FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormControl,
   FormMessage,
 } from "@/app/components/ui/form"
 import { Input } from "@/app/components/ui/input"
-import { Button } from "@/app/components/ui/button"
 import { PasswordInput } from "./PasswordInput"
 // import { getMe } from "@/lib/api"
 import { login as loginApi } from "@/lib/api"
-import {useRouter} from "next/navigation"
+import { useRouter } from "next/navigation"
 
 type DialogMessage = {
   title: string
@@ -122,7 +122,7 @@ async function onSubmit(values: LoginSchema) {
       <p className="text-center text-sm text-muted-foreground">
         Have you registered yet?{" "}
         <button
-          className="text-primary hover:underline"
+          className="text-primary hover:underline color-cyan"
           onClick={onSwitch}
         >
           Create an account

@@ -11,12 +11,12 @@ export default function AuthPage({
   onSwitch: () => void
 }) {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-slate-50">
+    <div className="min-h-screen flex flex-col items-center justify-center gap-3 bg-slate-50 border rounded-2xl shadow-sm">
       
       <Image
-        src="/images/logo.png"
-        width={300}
-        height={300}
+        src="/images/knowlix_full_logo.png"
+        width={500}
+        height={500}
         alt="logo"
         className="object-contain"
       />
